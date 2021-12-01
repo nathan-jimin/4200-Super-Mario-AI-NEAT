@@ -1,0 +1,28 @@
+{
+  "info": {
+    "coins": {
+      "address": 8261055,
+      "type": "|u1"
+    },
+    "endoflevel": {
+      "address": 8262617,
+      "type": "|u1"
+    },
+    "lives": {
+      "address": 8261054,
+      "type": "|i1"
+    },
+    "score": {
+      "address": 8261428,
+      "type": "<u4"
+    },
+    "xpos": {
+      "address": 8257662,
+      "type": "<u2"
+    },
+    "ypos": {
+      "address": 8257664,
+      "type": "<u2"
+    }
+  }
+}
