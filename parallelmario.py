@@ -24,7 +24,7 @@ class Worker(object):
 
 		done = False
 
-		net = neat.nn.FeedForwardNetwork.create(self.genome, self.config)
+		net = neat.nn.RecurrentNetwork.create(self.genome, self.config)
 
 		imgarray = []
 
@@ -71,15 +71,14 @@ class Worker(object):
 				fitness += 10000
 				done = True
 
-		self.viewer.close()
-		self.env.close()
+		#self.viewer.close()
+		#self.env.close()
 		print("fitness =", fitness)
 		return fitness
 
 def eval_genomes(genome, config):
 	worky = Worker(genome, config)
 	return worky.work()
-
 
 
 config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction, 
@@ -93,7 +92,7 @@ stats = neat.StatisticsReporter()
 p.add_reporter(stats)
 p.add_reporter(neat.Checkpointer(10))
 
-pe = neat.ParallelEvaluator(10, eval_genomes)
+pe = neat.ParallelEvaluator(5, eval_genomes)
 
 winner = p.run(pe.evaluate)
 
