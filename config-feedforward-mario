@@ -2,8 +2,8 @@
 
 [NEAT]
 fitness_criterion     = max
-fitness_threshold     = 10000
-pop_size              = 20
+fitness_threshold     = 100000
+pop_size              = 50
 #Can mess with pop size with paralellization (need library for that)
 reset_on_extinction   = True
 
@@ -25,7 +25,7 @@ bias_init_stdev         = 1.0
 bias_max_value          = 30.0
 bias_min_value          = -30.0
 bias_mutate_power       = 0.5
-bias_mutate_rate        = 0.7
+bias_mutate_rate        = 0.2
 bias_replace_rate       = 0.1
 
 # genome compatibility options
@@ -33,12 +33,12 @@ compatibility_disjoint_coefficient = 1.0
 compatibility_weight_coefficient   = 0.5
 
 # connection add/remove rates
-conn_add_prob           = 0.5
-conn_delete_prob        = 0.5
+conn_add_prob           = 0.25
+conn_delete_prob        = 0.25
 
 # connection enable options
 enabled_default         = True
-enabled_mutate_rate     = 0.02
+enabled_mutate_rate     = 0.2
 
 feed_forward            = False
 initial_connection      = partial_nodirect 0.5
@@ -70,7 +70,7 @@ weight_init_stdev       = 1.0
 weight_max_value        = 30
 weight_min_value        = -30
 weight_mutate_power     = 0.5
-weight_mutate_rate      = 0.8
+weight_mutate_rate      = 0.2
 weight_replace_rate     = 0.1
 
 [DefaultSpeciesSet]
